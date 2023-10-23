@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        .td-tr-top{
+            border: 1px solid #ddd;
+
+            text-align: left;
+            vertical-align: top;
+        }
+        .td-center{
+          text-align: center;
+          vertical-align: middle;
+
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        p, h2, form{
+          background-color: white;
+        }
+
+        td, th{
+          padding: 10px;
+        }
+    </style>
+</head>
+<body>
+  <table align="center" border=1 cellpadding="5" cellspacing="1" width="600px">
+
+    <tr>
+        <td>Заголовок всего сайта</td>
+    </tr>
+
+
+    <tr>
+        <td>
+            <ul>
+                <li><a href="index.html" target="_self">Главная</a>
+                <li><a href="index_chejov.html" target="_self" style="text-decoration: none; color: red;">Сайт с информацией про русских классиков</a>
+                <li><a href="read_DOM.html" target="_self">DOM_JS. Считываем информацию из DOM</a>
+                <li><a href="click_DOM.html" target="_self" >DOM_JS. Изменяем кириллицу на латиницу по клику</a>
+                <li><a href="algorithm.html" target="_self">Решение алгоритмической задачи</a>
+            </ul>
+        </td>
+    </tr>
+  </table>
+  <h1> 2 писателя России 19 века</h1>
+    <table>
+      <tr class="td-center">
+        <td style="font-size: 25px; color: red;">
+        <a href="index_chejov.html">  
+            <img src="scale_2400.jpeg" alt="#" style="max-height: 70px;">
+        </a>
+          <a href="index_chejov.html">Антон Павлович Чехов</a>
+        </td>
+        <td style="font-size: 25px;">
+          <img src="1280px-Turgenev_by_Repin.jpg" alt="#" style="max-height: 70px;">
+          <a href="#" style="color: red;">Иван Сергеевич Тургенев</a>
+        </td>
+      </tr>
+    </table>
+    <hr style="border: 2px solid #000;">
+    <table id="start" style="width: 100%; border-collapse: collapse; background-image: url('c5f476b4737fbf433944bf32fad16d88.png'); background-size: 50px; background-repeat: repeat;">
+        <tr>
+            <td colspan="2">
+                <a href="#home_turg">Главная</a> | <a href="#about_turg">Об Иване Тургеневе</a> | <a href="#contact_turg">Обратная связь</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background-color: white;">
+                <h2 id="home_turg">Главная</h2>
+                <p>На данной странице указана информация о великом русском писателе Иване Сергеевиче Тургеневе.</p>
+                <h3>Нумерованный список:</h3>
+                <ol>
+                    <li>Биография Ивана Сергеевича Тургенева</li>
+                    <li>Литературное наследие</li>
+                    <li>
+                        Важные произведения (с вложенным не нумерованным списком):
+                        <ul>
+                            <li>"Отцы и дети"</li>
+                            <li>"Муму"</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h3>Не нумерованный список:</h3>
+                <ul>
+                    <li>Интересные факты</li>
+                    <li>Влияние на литературу</li>
+                </ul>
+            </td>
+        </tr>
+        <tr class="td-tr-top">
+            <td>
+                <h2 id="about_turg">Об Иване Сергеевиче Тургеневе</h2>
+                <p>Ива́н Серге́евич Турге́нев — русский писатель-реалист, поэт, публицист, драматург, прозаик и переводчик. Один из классиков русской литературы, внёсших наиболее значительный вклад в её развитие во второй половине XIX века. Высокую оценку творчество Тургенева получило в России и на Западе.</p>
+                <br>
+                <a  href="https://ru.wikipedia.org/wiki/Чехов,_Антон_Павлович" target="_blank">Больше информации на википедии</a>
+                <br>
+                <br>
+                <br>
+                <a href="1280px-Turgenev_by_Repin.jpg" target="_blank">
+                  <figure>
+                  <img src="1280px-Turgenev_by_Repin.jpg" alt="#" style="max-height: 600px;">
+                  <figcaption>А. Портрет работы И. Е. Репина, 1874 год</figcaption>
+                  </figure>
+                </a>
+            </td>
+            <td>
+              <h2>Интересные факты</h2>
+              <p>Иван Тургенев был мультиязычным писателем, провел большую часть жизни в Европе, имел конфликты с Достоевским, связан с понятием "нигилизм" и был страстным коллекционером искусства.</p>
+            </td>
+            
+        </tr>  
+        <tr class="td-tr-top">
+          <td colspan="2">
+              <h2>Литературное наследие</h2>
+              <p>Иван Тургенев оставил литературное наследие, включающее в себя роман "Отцы и дети," развитие реализма и живописное описание природы. Его работы прославляются многогранными персонажами и изучением человеческой психологии.</p>
+          </td>
+
+      </tr>  
+        <tr class="td-tr-top">
+            <td>
+                <h2 id="contact_turg">Обратная связь</h2>
+                <p>Оцените данную статью</p>
+                <form action="#" method="get">
+                  <label for="name">Ваше имя:</label>
+                  <input type="text" id="name" name="name" required>
+                  <br>
+                  <br>
+                  <label for="score">Оцените статью по 10-бальной шкале:</label>
+                  <input type="number" id="score" name="score" min="1" max="10" required>
+                  <br>
+                  <br>
+                  <label>Была ли статья полезна?</label>
+                  <input type="radio" id="yes" name="useful" value="yes" >
+                  <label for="yes">Да</label>
+                  <input type="radio" id="no" name="useful" value="no" >
+                  <label for="no">Нет</label>
+                  <br>
+                  <br>
+                  <label>Кто из классиков вам понравился больше?</label>
+                  <input type="checkbox" id="Chejov" name="favorite" value="Chejov">
+                  <label for="Chejov">А. П. Чехов</label>
+                  <input type="checkbox" id="Turgenev" name="favorite" value="Turgenev">
+                  <label for="Turgenev">И. С. Тургенев</label>
+                  <br>
+                  <br>
+                  <label for="date">Дата отправки</label>
+                  <input type="date" id="date" name="date" >
+                  <br>
+                  <br>
+                  <label for="password">Пароль:</label>
+                  <input type="password" id="password" name="password" >
+                  <br>
+                  <br>
+                  <input type="hidden" id="hidden" name="hidden" value="defaultValue">
+                  <br>
+                  <br>
+                  <input type="submit" value="Отправить">
+              </form>
+              
+            </td>
+            <td>
+              <a style="font-size: 40px;" href="#start">К началу</p>
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>

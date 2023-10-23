@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+
+        .td-tr-top{
+            border: 1px solid #ddd;
+
+            text-align: left;
+            vertical-align: top;
+        }
+        .td-center{
+          text-align: center;
+          vertical-align: middle;
+
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        p, h2, form{
+          background-color: white;
+        }
+    </style>
+</head>
+<body>
+  <table align="center" border=1 cellpadding="5" cellspacing="1" width="600px">
+
+    <tr>
+        <td>Заголовок всего сайта</td>
+    </tr>
+
+
+    <tr>
+        <td>
+            <ul>
+                <li><a href="index.html" target="_self">Главная</a>
+                <li><a href="index_chejov.html" target="_self" style="text-decoration: none; color: red;">Сайт с информацией про русских классиков</a>
+                <li><a href="read_DOM.html" target="_self">DOM_JS. Считываем информацию из DOM</a>
+                <li><a href="click_DOM.html" target="_self" >DOM_JS. Изменяем кириллицу на латиницу по клику</a>
+                <li><a href="algorithm.html" target="_self">Решение алгоритмической задачи</a>
+            </ul>
+        </td>
+    </tr>
+  </table>
+  <h1> 2 писателя России 19 века</h1>
+    <table>
+      <tr class="td-center">
+        <td style="font-size: 25px; color: red;">
+
+          <img src="scale_2400.jpeg" alt="#" style="max-height: 70px;">
+          <a href="#" style="color: red;" >Антон Павлович Чехов</a>
+
+        </td>
+
+        <td style="font-size: 25px;">
+          <a href="index_turgenev.html">
+            <img src="1280px-Turgenev_by_Repin.jpg" alt="#" style="max-height: 70px;">
+          </a>
+          <a href="index_turgenev.html">Иван Сергеевич Тургенев</a>
+
+        </td>
+      </tr>
+    </table>
+    <hr style="border: 2px solid #000;">
+    <table id="start" style="width: 100%; border-collapse: collapse; background-image: url('c5f476b4737fbf433944bf32fad16d88.png'); background-size: 50px; background-repeat: repeat;">
+        <tr>
+            <td colspan="2">
+                <a href="#home">Главная</a> | <a href="#about">Об Антоне Чехове</a> | <a href="#contact">Обратная связь</a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background-color: white;">
+                <h2 id="home">Главная</h2>
+                <p>На данной странице указана информация о великом русском писателе Антоне Павловиче Чехове.</p>
+                <h3>Нумерованный список:</h3>
+                <ol>
+                    <li>Биография Антона Павловича Чехова</li>
+                    <li>Литературное наследие</li>
+                    <li>
+                        Важные произведения (с вложенным не нумерованным списком):
+                        <ul>
+                            <li>"Вишневый сад"</li>
+                            <li>"Три сестры"</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h3>Не нумерованный список:</h3>
+                <ul>
+                    <li>Интересные факты</li>
+                    <li>Влияние на литературу</li>
+                </ul>
+            </td>
+        </tr>
+        <tr class="td-tr-top">
+            <td>
+                <h2 id="about">Об Антоне Павловиче Чехове</h2>
+                <p>Анто́н Па́влович Че́хов — русский писатель, прозаик, драматург, публицист, врач, общественный деятель в сфере благотворительности. Классик мировой литературы. Почётный академик Императорской академии наук по разряду изящной словесности. Один из самых известных драматургов мира.</p>
+                <br>
+                <a  href="https://ru.wikipedia.org/wiki/Чехов,_Антон_Павлович" target="_blank">Больше информации на википедии</a>
+                <br>
+                <br>
+                <br>
+                <a href="scale_2400.jpeg" target="_blank">
+                  <figure>
+                  <img src="scale_2400.jpeg" alt="Красивый закат над горизонтом" style="max-height: 600px;">
+                  <figcaption>А. П. Чехов, 1904 год. Последнее фото.</figcaption>
+                  </figure>
+                </a>
+            </td>
+            <td>
+              <h2>Интересные факты</h2>
+              <p>Помимо литературной деятельности, Чехов был также врачом и путешественником. Его произведения отражают глубокое понимание человеческой природы и общества.</p>
+            </td>
+            
+        </tr>  
+        <tr class="td-tr-top">
+          <td colspan="2">
+              <h2>Литературное наследие</h2>
+              <p>Антон Чехов оставил огромное литературное наследие. Его короткие рассказы, такие как "Дама с собачкой" и "Вишневый сад," остаются популярными и вдохновляют новые поколения писателей и читателей.</p>
+          </td>
+
+      </tr>  
+        <tr class="td-tr-top">
+            <td>
+                <h2 id="contact">Обратная связь</h2>
+                <p>Оцените данную статью</p>
+                <form action="#" method="get">
+                  <label for="name">Ваше имя:</label>
+                  <input type="text" id="name" name="name" required>
+                  <br>
+                  <br>
+                  <label for="score">Оцените статью по 10-бальной шкале:</label>
+                  <input type="number" id="score" name="score" min="1" max="10" required>
+                  <br>
+                  <br>
+                  <label>Была ли статья полезна?</label>
+                  <input type="radio" id="yes" name="useful" value="yes" >
+                  <label for="yes">Да</label>
+                  <input type="radio" id="no" name="useful" value="no" >
+                  <label for="no">Нет</label>
+                  <br>
+                  <br>
+                  <label>Кто из классиков вам понравился больше?</label>
+                  <input type="checkbox" id="Chejov" name="favorite" value="Chejov">
+                  <label for="Chejov">А. П. Чехов</label>
+                  <input type="checkbox" id="Turgenev" name="favorite" value="Turgenev">
+                  <label for="Turgenev">И. С. Тургенев</label>
+                  <br>
+                  <br>
+                  <label for="date">Дата отправки</label>
+                  <input type="date" id="date" name="date" >
+                  <br>
+                  <br>
+                  <label for="password">Пароль:</label>
+                  <input type="password" id="password" name="password" >
+                  <br>
+                  <br>
+                  <input type="hidden" id="hidden" name="hidden" value="defaultValue">
+                  <br>
+                  <br>
+                  <input type="submit" value="Отправить">
+              </form>
+              
+            </td>
+            <td>
+              <a style="font-size: 40px;" href="#start">К началу</p>
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>

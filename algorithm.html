@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Начальная страница</title>
+</head>
+<body>
+
+<table align="center" border=1 cellpadding="5" cellspacing="1" width="600px">
+
+    <tr>
+        <td>Заголовок всего сайта</td>
+    </tr>
+
+
+    <tr>
+        <td>
+            <ul>
+                <li><a href="index.html" target="_self">Главная</a>
+                <li><a href="index_chejov.html" target="_self">Сайт с ифнормацией про русских классиков</a>
+                <li><a href="read_DOM.html" target="_self" >DOM_JS. Считываем информацию из DOM</a>
+                <li><a href="click_DOM.html" target="_self">DOM_JS. Изменяем кириллицу на латиницу по клику</a>
+                <li><a href="algorithm.html" target="_self" style="text-decoration: none; color: red;">Решение алгоритмической задачи</a>
+            </ul>
+        </td>
+    </tr>
+
+    <tr>
+        <td><h3 align="center">Решение алгоритмической задачи</h3></td>
+    </tr>
+    <tr>
+      <td>    
+        <table >
+            <tr>
+              <td colspan="2">Даны вещественные числа: A, B, C. <br>Определить, выполняются ли неравенства A < B < C или A > B > C и какое именно неравенство выполняется.</td>
+            </tr>
+            <tr>
+              <td colspan="2">Введите соответсвующие вещественные числа:</td>
+            </tr>
+            <tr>
+              <td><form id="inequalityForm">
+                <label for="task">Условие задачи:</label>
+                <input type="text" id="task" name="task" value="Принадлежит ли целое C диапазону A-B? Если принадлежит - отправить все на сервер"><br><br>
+        
+                <label for="a">A:</label>
+                <input type="number" id="a" name="a" step="any"><br><br>
+        
+                <label for="b">B:</label>
+                <input type="number" id="b" name="b" step="any"><br><br>
+        
+                <label for="c">C:</label>
+                <input type="number" id="c" name="c" step="any"><br><br>
+        
+                <label for="result">Результат решения:</label>
+                <p id="result"></p><br><br>
+        
+                <input type="button" value="Показать решение" onclick="solve()">
+                <input type="button" value="Отправить на сервер" onclick="sendDataToServer()">
+            </form>
+        
+            <p id="result"></p>
+        
+            </td>
+            </tr>
+        </table>
+      </td>
+    </tr>
+    
+            <!--Уникально содержание страницы-->
+
+            <!-- <img src="64b2a25a3e9178140fccb0f4fa0d4511.jpg"> -->
+
+      
+
+
+    <tr>
+        <td>Нижний блок сайта</td>
+    </tr>
+
+
+</table>
+</body>
+<script>
+  function solve() {
+
+      // let task = document.getElementById('task').value;
+      let a = parseFloat(document.getElementById('a').value);
+      let b = parseFloat(document.getElementById('b').value);
+      let c = parseFloat(document.getElementById('c').value);
+      let result = document.getElementById('result');
+      
+      
+      if (a < b && b < c) {
+          result.textContent = ": Выполняется неравенство A < B < C";
+      } else if (a > b && b > c) {
+          result.textContent = ": Выполняется неравенство A > B > C";
+      } else {
+          result.textContent = ": Ни одно из неравенств не выполняется";
+      }
+  }
+
+  function sendDataToServer() {
+    const task = document.getElementById('task').value;
+    const a = parseFloat(document.getElementById('a').value);
+    const b = parseFloat(document.getElementById('b').value);
+    const c = parseFloat(document.getElementById('c').value);
+    let solution;
+
+    if (a < b && b < c) {
+          solution = ": Выполняется неравенство A < B < C";
+      } else if (a > b && b > c) {
+          solution = ": Выполняется неравенство A > B > C";
+      } else {
+          solution = ": Ни одно из неравенств не выполняется";
+      }
+
+   
+      const url = "https://www.bing.com/search?q=search&" + task + "&a=" + a + "&b=" + b + "&c=" + c + "&solution=" + solution;
+      
+      // "https://httpbin.org/get?task=" - альтернатива 
+      window.location.href = url; 
+  }
+</script>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Начальная страница</title>
+</head>
+<body>
+
+<table align="center" border=1 cellpadding="5" cellspacing="1" width="600px">
+
+    <tr>
+        <td>Заголовок всего сайта</td>
+    </tr>
+
+
+    <tr>
+        <td>
+            <ul>
+                <li><a href="index.html" target="_self">Главная</a>
+                <li><a href="index_chejov.html" target="_self">Сайт с информацией про русских классиков</a>
+                <li><a href="read_DOM.html" target="_self">DOM_JS. Считываем информацию из DOM</a>
+                <li><a href="click_DOM.html" target="_self" style="text-decoration: none; color: red;">DOM_JS. Изменяем кириллицу на латиницу по клику</a>
+                <li><a href="algorithm.html" target="_self">Решение алгоритмической задачи</a>
+            </ul>
+        </td>
+    </tr>
+
+    <tr>
+      <td>    
+        <table style="background-image: url('64b2a25a3e9178140fccb0f4fa0d4511.jpg'); background-repeat: no-repeat; height: 731px; width: 522px;">
+          <tr style="height: 90px;">
+            <td style="width: 110px;"></td>
+            <td colspan="4"  style="vertical-align: bottom;" id="row1">Выдан отделом УФМС по г. Москве </td>
+          </tr>  
+
+          <tr style="height: 80px;">
+            <td style="width: 110px;"></td>
+            <td  style = "vertical-align: bottom; width: 90px;" id="row2">27.10.2018</td>
+            <td style="width: 40px;"></td>
+            <td style="width: 80px;"></td>
+            <td style = "vertical-align: bottom;"> 777-777</td>
+          </tr>
+
+          <tr style="height: 250px;">
+            <td colspan="3"></td>
+
+            <td style = "vertical-align: bottom;" colspan="2" id="row3">Печененко</td>
+          </tr>
+
+          <tr style="height: 55px;">
+            <td colspan="3"></td>
+
+            <td style = "vertical-align: bottom;" colspan="2" id="row4">Александр</td>
+          </tr>
+
+          <tr style="height: 25px;">
+            <td colspan="3"></td>
+
+            <td style = "vertical-align: bottom;" colspan="2" id="row5"></td>
+          </tr>
+
+          <tr style="height: 25px;">
+            <td colspan="2"></td>
+            <td colspan="2" style = "vertical-align: bottom; ">муж</td>
+            <td id="row6"> 2004</td>
+          </tr>
+          <!-- <tr style="height: 50px;">
+            <td></td>
+            <td></td>
+          </tr> -->
+          <tr style="height: 25px;">
+            <td colspan="3"></td>
+            <td>г. Москва</td>
+          </tr>
+
+          <tr>
+          </tr>
+            
+        </table>
+      </td>
+    </tr>
+    
+    
+          
+    <tr>
+        <td>Нижний блок сайта</td>
+    </tr>
+
+
+</table>
+</body>
+<script >
+
+  let name = document.getElementById('row3');
+
+  let isName = true;
+
+  name.addEventListener('click', function() {
+
+    if (isName) {
+      name.innerText = "Pechenenko";
+    } else {
+      name.innerText = "Печененко";
+    }
+    isName = !isName;
+  });
+
+
+
+let surname = document.getElementById('row4');
+
+let isSurname = true;
+
+surname.addEventListener('click', function() {
+
+  if (isSurname) {
+    surname.innerText = "Aleksandr";
+  } else {
+    surname.innerText = "Александр";
+  }
+  isSurname = !isSurname;
+});
+
+
+let year = document.getElementById('row6');
+
+let isYear = true;
+
+year.addEventListener('click', function() {
+
+  if (isYear) {
+    year.innerText = "two thousand four";
+  } else {
+    year.innerText = "2004";
+  }
+  isYear = !isYear;
+});
+
+</script>
+</html>
